@@ -13,6 +13,8 @@
 - You will see the logs for all services. Ctrl-C will stop it.
 - Alternatively, you can run `docker-compose up -d` and it will run in the background. You'll need to run `docker-compose down -v` to stop it.
 
+You can access the running laravel install at https://localhost (it uses a self signed cert, so be prepared for warnings).
+
 ## Important
 
 - Our images do the composer install when they build and our "vendor" folder is included as a part of the the image. Since composer picks versions based on the PHP version its run with, I would highly recommend trashing the composer.lock and vendor folders in the repo. After this, you need to run composer install from the image while docker is running.
